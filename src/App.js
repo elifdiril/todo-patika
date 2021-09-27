@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import AddItem from './components/AddItem';
+import List from './components/List';
 
 function App() {
+  // if status true => job is done, else job is still active
+  const [list, setList] = useState([{ id: 0, todo: "wfsdfsdf", status: true }, { id: 1, todo: "fsdfsdf", status: false }])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="todoapp">
+      <h1 className="header">Todos</h1>
+      <AddItem list={list} setList={setList} />
+      {list.length > 0 && <List list={list} setList={setList} />}
     </div>
   );
 }
