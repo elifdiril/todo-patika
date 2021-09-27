@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 
 function List({ list, setList }) {
-    const [allChecked, setAllChecked] = useState(false);
 
     const deleteHandle = (element) => {
         setList(list.filter(el => el.todo !== element.todo))
@@ -22,10 +20,6 @@ function List({ list, setList }) {
         console.log(newList)
         setList(newList);
     }
-
-    useEffect(() => {
-        console.log("check")
-    }, [list])
 
     return (
         <div>
