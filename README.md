@@ -1,3 +1,7 @@
+# It's a todo app, patika homework. 
+## You can list your todos, add and delete.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
